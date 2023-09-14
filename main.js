@@ -13,7 +13,6 @@ $(document).ready(function () {
     } else {
         resetGlobe();
         globe.animate();
-        globe.init.mesh.rotation.y -= 0.0025
         requestAnimationFrame(animate);
     }
 });
