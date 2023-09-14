@@ -13,6 +13,5 @@ $(document).ready(function () {
     } else {
         resetGlobe();
         globe.animate();
-        requestAnimationFrame(animate);
     }
 });
