@@ -115,6 +115,7 @@ DAT.Globe = function(container, opts) {
 
     mesh = new THREE.Mesh(geometry, material);
     mesh.rotation.y = Math.PI;
+    mesh.rotation.y -= 0.0025;
     scene.add(mesh);
 
     shader = Shaders['atmosphere'];
