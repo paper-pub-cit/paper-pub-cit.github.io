@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background: #456386 url('bcg_blue.jpg') top left repeat-x;
-  color: #f3f3f3;
+  color: #ffffff;
   font-family: sans-serif;
   font-size: 17px;
   line-height: 20px;
@@ -14,7 +14,7 @@ body {
 }
 
 #info {
-  font-size: 12px;
+  font-size: 13px;
   position: absolute;
   bottom: 5px;
   background-color: #456386;
@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #7a7a7a;
+  color: #b6b6b6;
   text-decoration: underline;
 }
 
