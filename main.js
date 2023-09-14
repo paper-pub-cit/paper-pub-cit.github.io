@@ -13,7 +13,5 @@ $(document).ready(function () {
     } else {
         resetGlobe();
         globe.animate();
-        globe.rotation.y -= 0.002;
-        requestAnimationFrame(animate);
     }
 });
