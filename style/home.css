@@ -14,12 +14,17 @@ body {
 }
 
 #main {
-  padding: 20px;
   width: 700px;
   height: 700px;
   background: url(../fig/rotatingEarth.gif) no-repeat;
   background-size: 100% 100%;
   border-radius: 20px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 #content {
