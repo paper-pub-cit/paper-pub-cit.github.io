@@ -33,7 +33,7 @@ body {
   color: rgb(225, 235, 247);
   margin-bottom: 20px;
   margin-right: 100px;
-  margin-left: 0px;
+  margin-left: -80px;
   font: normal 200% arial, sans-serif;
 }
 
@@ -42,7 +42,7 @@ body {
   color: rgb(225, 235, 247);
   margin-top: -20px;
   margin-right: 100px;
-  margin-left: 0px;
+  margin-left: -80px;
   padding-top: 20px;
   font: normal 125% arial, sans-serif;
 }
