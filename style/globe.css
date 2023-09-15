@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #456386 url('bcg_blue.jpg') top left repeat-x;
+  background: #456386 url('../fig/bcg_blue.jpg') top left repeat-x;
   color: #ffffff;
   font-family: sans-serif;
   font-size: 17px;
