@@ -36,19 +36,14 @@ body {
 #content h1{
   background-color: rgba(10, 10, 10, 0.5);
   color: rgb(225, 235, 247);
-  margin-bottom: 20px;
-  margin-right: 80px;
-  margin-left: -100px;
+  margin: auto;
   font: normal 205% arial, sans-serif;
 }
 
 #content p{
   background-color: rgba(10, 10, 10, 0.5);
   color: rgb(225, 235, 247);
-  margin-top: -20px;
-  margin-right: 80px;
-  margin-left: -100px;
-  padding-top: 20px;
+  margin: auto;
   font: normal 125% arial, sans-serif;
 }
 
