@@ -29,6 +29,7 @@ body {
 
 #content {
   width: 85%;
+  margin: auto;
   float: center;
   padding-top: 200px;
 }
