@@ -84,6 +84,10 @@ DAT.Globe = function(container, opts) {
   var padding = 40;
   var PI_HALF = Math.PI / 2;
 
+  var ROTATIONSPEED = 0.003;
+  var k = ROTATIONSPEED;
+  var f = false;
+
   function init() {
 
     container.style.color = '#fff';
@@ -271,9 +275,14 @@ DAT.Globe = function(container, opts) {
   function onMouseDown(event) {
     event.preventDefault();
 
+    k = 0;
+    f = true;
+
     container.addEventListener('mousemove', onMouseMove, false);
     container.addEventListener('mouseup', onMouseUp, false);
     container.addEventListener('mouseout', onMouseOut, false);
+
+    target.y = rotation.y;
 
     mouseOnDown.x = - event.clientX;
     mouseOnDown.y = event.clientY;
@@ -298,6 +307,9 @@ DAT.Globe = function(container, opts) {
   }
 
   function onMouseUp(event) {
+    k = ROTATIONSPEED;
+    f = false;
+
     container.removeEventListener('mousemove', onMouseMove, false);
     container.removeEventListener('mouseup', onMouseUp, false);
     container.removeEventListener('mouseout', onMouseOut, false);
@@ -305,6 +317,9 @@ DAT.Globe = function(container, opts) {
   }
 
   function onMouseOut(event) {
+    k = ROTATIONSPEED;
+    f = false;
+
     container.removeEventListener('mousemove', onMouseMove, false);
     container.removeEventListener('mouseup', onMouseUp, false);
     container.removeEventListener('mouseout', onMouseOut, false);
@@ -351,8 +366,17 @@ DAT.Globe = function(container, opts) {
   function render() {
     zoom(curZoomSpeed);
 
-    rotation.x += (target.x - rotation.x) * 0.1;
-    rotation.y += (target.y - rotation.y) * 0.1;
+    target.x -= k;
+
+    rotation.x += (target.x - rotation.x) * 0.2;
+
+    if (f == true){
+      rotation.y += (target.y - rotation.y) * 0.2;}
+    if (f == false){
+      target.y = Math.PI / 5.0;
+      rotation.y += (target.y - rotation.y) * 0.02;
+    };
+
     distance += (distanceTarget - distance) * 0.3;
 
     camera.position.x = distance * Math.sin(rotation.x) * Math.cos(rotation.y);
